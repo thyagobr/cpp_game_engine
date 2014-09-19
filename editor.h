@@ -1,11 +1,15 @@
 #ifndef EDITOR_H
 #define EDITOR_H
 
+#define DATAPATH_MAP "data/img/map/"
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <stdio.h>
 #include "keys.h"
 #include "state.h"
+#include "tilemap.h"
+#include "tilelist.h"
 
 class Editor
 {
@@ -19,12 +23,13 @@ class Editor
     void tick();
     bool isActive();
 
-    void loadMap();
-
   private:
     sf::RenderWindow *app;
     std::vector<Keys> keys;
     State * currentState;
+    Tilemap map;
+    Tilelist tilelist;
+    std::vector<sf::Texture> textures;
 
 };
 
