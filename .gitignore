@@ -1,2 +1,8 @@
+# C object files
 *.o
+
+# VI swap files
+*.swp
+
+# All the executables
 build/*
